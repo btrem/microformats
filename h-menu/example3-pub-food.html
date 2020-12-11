@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>h-menu example 1</title>
+
+        <style>
+            dl > div {
+                margin-bottom: 1em;
+            }
+            dt {
+                font-weight: bold;
+            }
+            dt,
+            .p-price {
+                display: inline-block;
+            }
+            .p-price {
+            }
+            .e-description,
+            .p-category {
+                margin-left: 0;
+            }
+            .p-category {
+                display: inline-block;
+                margin-right: 1em;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <hgroup>
+                <h2>h-menu example 1</h2>
+                <h1 class="p-name">pub menu</h1>
+            </hgroup>
+
+        </header>
+
+
+
+        <main>
+
+            <section id="restaurant-card" class="h-card">
+
+                <a class="p-name p-org u-url" href="https://tsmchughs.com/">
+                    T.S. McHugh's Irish Pub & Restaurant
+                </a>
+
+                <div class="p-adr h-adr">
+                    <div class="p-street-address">21 Mercer <abbr title="street">St</abbr>.</div>
+                    <span class="p-locality">Seattle</span>,
+                    <abbr class="p-region" title="Washington">WA</abbr>
+                    <span class="p-postal-code">98109</span>
+                </div>
+
+                <p class="p-tel">206-282-1910</p>
+
+                <p class="p-email">tsmchughs&#64;tsmchughs&#46;com</p>
+
+                <p>
+                    <a class="u-url" href="http://www.facebook.com/tsmchughs">Our Facebook page</a>
+                </p>
+
+            </section>
+
+
+            <section class="h-menu">
+
+                <h1 class="p-name">Starters</h1>
+
+                <dl>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Nachos</dt>
+                        <dd class="p-price">$8.75</dd>
+                        <dd class="e-description">
+                            Crispy fried yellow and blue tortilla chips baked with Jack and
+                            Cheddar cheeses, tomatoes, green onions, olives, and fresh jalapeños.
+                            <ul>
+                                <li>add guacamole $2.00</li>
+                            </ul>
+                        </dd>
+                        <dd class="p-category">gluten-free</dd>
+                        <dd class="p-category">vegetarian</dd>
+                    </div>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Hummus Platter</dt>
+                        <dd class="p-price">$8.95</dd>
+                        <dd class="e-description">
+                            Hummus with pickled vegetables, and olives.
+                        </dd>
+                        <dd class="p-category">gluten-free</dd>
+                        <dd class="p-category">vegetarian</dd>
+                    </div>
+
+            </section>
+
+            <section class="h-menu">
+
+                <h1 class="p-name">Salads</h1>
+
+                <dl>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Tossed Green Salad</dt>
+                        <dd class="p-price"><span>small $5.25</span> <span>large $8.95</span></dd>
+                        <dd class="e-description">
+                            Tossed with your choice of our blue cheese, dijon, or Ballymaloe dressing.
+                            <ul>
+                                <li>add chicken $3.00</li>
+                                <li>add steak $6.00</li>
+                            </ul>
+                        </dd>
+                        <dd class="p-category">gluten-free</dd>
+                    </div>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Classic Cæsar</dt>
+                        <dd class="p-price"><span>small $5.25</span> <span>large $9.50</span></dd>
+                        <dd class="e-description">
+                            Crisp Romaine tossed with grated Parmesan cheese, homemade croutons, and
+                            our own Cæsar dressing. Topped with anchovy fillet upon request.
+                            <p>add chicken $3.00</p>
+                        </dd>
+                        <dd class="p-category">gluten-free</dd>
+                    </div>
+
+                </dl>
+
+            </section>
+
+            <section class="h-menu">
+
+                <header>
+                    <h1 class="p-name">Main Dishes</h1>
+                    Tried & true for 30 years. Prepared with pride.
+                </header>
+
+                <dl>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Chicken & Vegetable Pie</dt>
+                        <dd class="p-price">$16.50</dd>
+                        <dd class="e-description">
+                            Roasted chicken, English peas, baby carrots, field mushrooms and pearl
+                            onions in a savory chicken sauce.
+                        </dd>
+                    </div>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Ale-Battered Fish & Chips</dt>
+                        <dd class="p-price">$15.95</dd>
+                        <dd class="e-description">
+                            Alaskan Cod, ale battered, dusted with panko, fried till golden brown.
+                            Served with house-made tartar.
+                        </dd>
+                    </div>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Bangers & Mash</dt>
+                        <dd class="p-price">$11.00</dd>
+                        <dd class="e-description">
+                            Traditional banger sausages, served with Irish champ.
+                        </dd>
+                        <dd class="p-category">gluten-free</dd>
+                    </div>
+
+                </dl>
+
+              </section>
+
+              <section class="h-menu">
+
+                <header>
+                    <h1 class="p-name">Burgers</h1>
+                    <span id="burger-side">Served with fries.</span>
+                </header>
+
+                <dl>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Blue Cheese Burger</dt>
+                        <dd class="p-price">$13.00</dd>
+                        <dd class="e-description">
+                            Hand-formed patty with blue cheese, served with sautéed mushrooms and onions.
+                            <span class="include"></span>
+                            <p>add bacon $2.00</p>
+                        </dd>
+                    </div>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Chipotle Black Bean Burger</dt>
+                        <dd class="p-price">$11.50</dd>
+                        <dd class="e-description">
+                            Black bean vegetarian burger broiled and served with chipotle mayonaisse,
+                            roasted red peppers, Swiss cheese, avocado, and bourbon braised onions.
+                        </dd>
+                        <dd class="p-category">
+                            vegetarian
+                        </dd>
+                    </div>
+
+                </dl>
+
+            </section>
+
+
+            <section class="h-menu">
+
+                <header>
+                  <h1 class="p-name">Sandwiches</h1>
+                  <span id="sandwich-side">Served with fries or a salad.</span>
+                </header>
+
+                <dl>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Flat Iron Steak</dt>
+                        <dd class="p-price">$14.95</dd>
+                        <dd class="e-description">
+                            The “butcher's favorite steak,” broiled with garlic butter and served on
+                            Fremont sourdough with George Dickel mustard and caramelized onions.
+                                                    </dd>
+                    </div>
+
+                    <div class="p-product h-product">
+                        <dt class="p-name">Grilled Fish Tacos</dt>
+                        <dd class="p-price">$10.95</dd>
+                        <dd class="e-description">
+                            Fresh cod dipped in ale batter, grilled. Served in a corn
+                            tortilla wrap with salsa mayo, tomatoes, and crisp lettuce.
+                                                    </dd>
+                        <dd class="p-category">gluten-free</dd>
+                    </div>
+
+                </dl>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+			<address>
+				<a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+			</address>
+
+        </footer>
+
+    </body>
+
+</html>

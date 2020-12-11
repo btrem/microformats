@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>h-menu example 4 prix fixe</title>
+
+        <style>
+            header > .h-card {
+                font-size: 150%;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            thead {
+                display: none;
+            }
+            tbody > tr:first-child {
+                color: white;
+                background-color: #333;
+            }
+            tr:nth-child(odd) {
+                color: black;
+                background-color: #ddd;
+            }
+            td,
+            th {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                vertical-align: top;
+            }
+            p {
+                max-width: 50em;
+            }
+            td {
+                max-width: 40em;
+            }
+            tbody > tr > th {
+                padding-right: 2em;
+                text-align: right;
+            }
+            th[scope="rowgroup"] {
+                font-size: larger;
+                text-align: center;
+            }
+            td > ul {
+                display: flex;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            td > ul > li {
+                padding-right: 2em;
+            }
+        </style>
+
+    </head>
+
+    <body class="h-menu">
+
+        <header>
+
+            <hgroup>
+                <h2>h-menu example 4</h2>
+                <h1 class="p-name">prix fixe menu</h1>
+            </hgroup>
+
+            <section class="p-seller h-card">
+
+                <a class="p-name p-org u-url" href="http://example.com/">Ten Mercer Restaurant</a>
+
+                <span class="p-locality">Seattle</span>, <abbr class="p-region" title="Washington">WA</abbr>
+
+            </section>
+
+        </header>
+
+        <main class="p-product h-product">
+
+            <p>
+                Choose one item from each section for
+                <span class="p-price">$30</span>.
+            </p>
+
+            <table class="e-description">
+
+                <thead>
+                    <tr>
+                        <th>item</th>
+                        <th>ingredients/description</th>
+                        <th>price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr><th scope="rowgroup" colspan="2">first course: choose one</th></tr>
+
+                    <tr>
+                        <th>Heirloom Tomato Bruschetta</th>
+                        <td>
+                            fresh mozzarella, Modena balsamic, basil, crostini
+                            <ul>
+                                <li>vegetarian</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Heirloom Tomato Soup</th>
+                        <td>
+                            fresh heirlooms, garlic, basil, cream
+                            <ul>
+                                <li>gluten-free</li>
+                                <li>vegetarian</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Ten Mercer House Salad</th>
+                        <td>
+                            mixed lettuce and greens, radish, cucumber, Israeli cous-cous, pumpkin seeds, green goddess dressing
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Grilled Romaine Salad</th>
+                        <td>
+                            feta, kalamata olives, smokey grilled tomato vinaigrette
+                            <ul>
+                                <li>gluten-free</li>
+                                <li>vegetarian</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tbody>
+
+                    <tr><th scope="rowgroup" colspan="2">second course: choose one</th></tr>
+
+                    <tr>
+                        <th>Petrale Sole</th>
+                        <td>
+                            pan fried sole, tarragon flour, artichoke lemon butter
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Seared Petite Tenderloin Medallions
+                        <td>
+                            shoulder tender medallions, wine demi glace, gorgonzola, mushrooms,
+                            sundried tomato, served over garlic mashers with seasonal vegetable
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Washington Chicken</th>
+                        <td>
+                            garlic-crusted pan-roasted Washington chicken, rosemary garlic fingerlings, pan jus
+                            <ul>
+                                <li>gluten-free</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Four Cheese Ravioli</th>
+                        <td>
+                            gorgonzola, leeks, spinach, tarragon, shiitakes
+                            <ul>
+                                <li>vegetarian</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Wild Mushroom Risotto</th>
+                        <td>
+                            Chanterelles, fresh thyme, white wine, vegetable stock
+                            <ul>
+                                <li>gluten-free</li>
+                                <li>vegan</li>
+                                <li>vegetarian</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tbody>
+
+                    <tr><th scope="rowgroup" colspan="2">desserts: choose one</th></tr>
+
+                    <tr>
+                        <th>Vanilla Bean Custard</th>
+                        <td>
+                            muscovado shell
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Chocolate Torte</th>
+                        <td>
+                            hazelnuts, orange custard, caramel
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p id="health-warning">
+                * Some items may contain raw or undercooked animal product.
+                Such items may increase your risk of foodborne illness, especially
+                if you have certain medical conditions.
+            </p>
+
+        </main>
+
+        <footer>
+            <address>
+                <a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+            </address>
+        </footer>
+
+    </body>
+
+</html>

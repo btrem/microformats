@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>h-menu example 2</title>
+
+        <style>
+            header > .h-card {
+                font-size: 150%;
+            }
+            table {
+                border-collapse: collapse;
+                margin-top: 1em;
+            }
+            thead {
+                display: none;
+            }
+            tbody > tr:first-child {
+                color: white;
+                background-color: #333;
+            }
+            tr:nth-child(odd) {
+                color: black;
+                background-color: #ddd;
+            }
+            td,
+            th {
+                padding: 1em 0.5em;
+                vertical-align: top;
+            }
+            td {
+                max-width: 40em;
+            }
+            tbody > tr > th {
+                padding-right: 2em;
+                text-align: right;
+            }
+            th[scope="rowgroup"] {
+                font-size: larger;
+                text-align: center;
+            }
+            td > ul {
+                display: flex;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            td > ul > li {
+                padding-right: 2em;
+            }
+        </style>
+
+    </head>
+
+    <body class="h-menu">
+
+        <header>
+
+            <hgroup>
+                <h2>h-menu example 2</h2>
+                <h1 class="p-name">dinner menu</h1>
+            </hgroup>
+
+            <section class="p-seller h-card">
+
+                <a class="p-name p-org u-url" href="http://example.com/">Ten Mercer Restaurant</a>
+
+                <span class="p-locality">Seattle</span>, <abbr class="p-region" title="Washington">WA</abbr>
+
+            </section>
+
+        </header>
+
+        <main>
+
+            <table class="h-menu">
+
+                <thead>
+                    <tr>
+                        <th>item</th>
+                        <th>ingredients/description</th>
+                        <th>price</th>
+                    </tr>
+                </thead>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">appetizers</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Oven-Roasted Penn Cove Mussels</th>
+                        <td class="e-description">
+                            julienne yams, seed bread, spicy curry sauce
+                        </td>
+                        <td class="p-price">$14</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Heirloom Tomato Bruschetta</th>
+                        <td class="e-description">
+                            fresh mozzarella, Modena balsamic, basil, crostini
+                            <ul>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$10</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Grilled Beef Tenderloin
+                        <td class="e-description">
+                            tamarind rum glaze, herbed avocado cream cheese, chipotle tortillas
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                        <td class="p-price">$14</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Heirloom Tomato Soup</th>
+                        <td class="e-description">
+                            fresh heirlooms, garlic, basil, cream
+                            <ul>
+                                <li class="p-category">gluten-free</li>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$9</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Wild Boar Ribs</th>
+                        <td class="e-description">
+                            Thai chili glaze, curried potato pancake
+                            <ul>
+                                <li class="p-category">gluten-free</li>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$11</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Artisan Cheese Plate</th>
+                        <td>
+                            <ul>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$15</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">sides</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Shoestring Fries</th>
+                        <td>
+                            <ul>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$6</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Seasonal Vegetable</th>
+                        <td>
+                            <ul>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$7</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Artisan Breads</th>
+                        <td>
+                            <span class="e-description">white bean spread</span>
+                            <data class="p-price" content="0">(free on request)</data>
+                            <ul>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td title="free on request">..</td>
+                    </tr>
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">sandwiches</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Stilton Burger</th>
+                        <td class="e-description">
+                            natural beef, Zoe’s bacon, tomato, fried onions, shoestring fries
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                        <td class="p-price">$16</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Dungeness Crab Cake Sandwich</th>
+                        <td class="e-description">
+                            fresh Dungeness crab cake, cilantro wasabi mayonaisse, red onion, shoestring fries
+                        </td>
+                        <td class="p-price">$17</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">salads</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Grilled Flat Iron Steak Salad</th>
+                        <td class="e-description">
+                            wild greens, pancetta, fresh basil and Stilton vinaigrette
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                        <td><span class="p-price">$16</span></span>/<span class="p-price">$23</span></span></td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Ten Mercer House Salad</th>
+                        <td class="e-description">
+                            mixed lettuce and greens, radish, cucumber, Israeli cous-cous, pumpkin seeds, green goddess dressing
+                        </td>
+                        <td class="p-price">$9</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Grilled Romaine Salad</th>
+                        <td class="e-description">
+                            English cucumber, kalamata olives, smokey grilled tomato vinaigrette
+                            <ul>
+                                <li class="p-category">gluten-free</li>
+                                <li class="p-category">vegan</li>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$9</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">seafood</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Prosciutto Wrapped Swordfish</th>
+                        <td class="e-description">
+                            pesto fregola, toasted pine nuts
+                        </td>
+                        <td class="p-price">$23</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Fresh Wild Salmon</th>
+                        <td>
+                            ask your server for tonight's preparation
+                        </td>
+                        <td><abbr title="market price">mkt</abbr>.</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Petrale Sole</th>
+                        <td class="e-description">
+                            pan fried sole, tarragon flour, artichoke lemon butter
+                        </td>
+                        <td class="p-price">$20</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Seared Ahi</th>
+                        <td class="e-description">
+                            bamboo rice, baby bok choy, wasabi, pickled ginger
+                            <ul>
+                                <li class="p-category">gluten-free</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$29</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">meats</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Seared Petite Tenderloin Medallions
+                        <td class="e-description">
+                            shoulder tender medallions, wine demi glace, gorgonzola, mushrooms,
+                            sundried tomato, served over garlic mashers with seasonal vegetable
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                        <td class="p-price">$21</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Oven Roasted Rack of Lamb</th>
+                        <td class="e-description">
+                            rosemary Dijon rub, demi glace, fried leeks, grilled polenta
+                        </td>
+                        <td class="p-price">$25</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Washington Chicken</th>
+                        <td class="e-description">
+                            garlic-crusted pan-roasted Washington chicken, rosemary garlic fingerlings, pan jus
+                            <ul>
+                                <li class="p-category">gluten-free</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$20</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Pork Tenderloin
+                        <td class="e-description">
+                            garlic fennel rub, <span lang="de">spätzle</span>, demi, sautéed spinach and spring garlic
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                        <td class="p-price">$22</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">New York Steak
+                        <td class="e-description">
+                            Tuscan style rub, grilled portabella, Stilton cheese, fresh corn and sweet onion mashers
+                            <a class="include"href="#health-warning">*</a>
+                        </td>
+                        <td class="p-price">$32</td>
+                    </tr>
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">others</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Smoked Salmon Fettuccine</th>
+                        <td class="e-description">
+                            fresh spinach fettuccine, tomato, lemon mascarpone cream sauce
+                        </td>
+                        <td class="p-price">$18</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Manila Clam &amp; Prosciutto Linguine</th>
+                        <td class="e-description">
+                            white wine, butter, cherry tomatoes
+                        </td>
+                        <td class="p-price">$19</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Four Cheese Ravioli</th>
+                        <td class="e-description">
+                            gorgonzola, leeks, spinach, tarragon, shiitakes
+                            <ul>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$17</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Wild Mushroom Risotto</th>
+                        <td class="e-description">
+                            Chanterelles, fresh thyme, white wine, vegetable stock
+                            <ul>
+                                <li class="p-category">gluten-free</li>
+                                <li class="p-category">vegan</li>
+                                <li class="p-category">vegetarian</li>
+                            </ul>
+                        </td>
+                        <td class="p-price">$22</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">desserts</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Vanilla Bean Custard</th>
+                        <td class="e-description">
+                            muscovado shell
+                        </td>
+                        <td class="p-price">$8</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Chocolate Torte</th>
+                        <td class="e-description">
+                            hazelnuts, orange custard, caramel
+                        </td>
+                        <td class="p-price">$8</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Dessert Special</th>
+                        <td>ask your server</td>
+                        <td><abbr title="market price">mkt</abbr>.</td>
+                    </tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Dessert Sampler</th>
+                        <td class="e-description">
+                            our three signature desserts — designed to share
+                        </td>
+                        <td class="p-price">$17</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr><th class="p-name" scope="rowgroup" colspan="3">cocktails</th></tr>
+
+                    <tr class="p-product h-product">
+                        <th class="p-name">Ten Martini</th>
+                        <td class="e-description">
+                            Tanqueray Ten gin, a whisper of Cinzano dry vermouth and a lime twist
+                        </td>
+                        <td class="p-price">$10</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p>All beef served at Ten Mercer is Creekstone Farms Premium Black Angus Beef.</p>
+
+            <p id="health-warning">
+                * Some items may contain raw or undercooked animal product.
+                Such items may increase your risk of foodborne illness, especially
+                if you have certain medical conditions.
+            </p>
+
+        </main>
+
+        <footer>
+
+			<address>
+				<a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+			</address>
+
+        </footer>
+
+    </body>
+
+</html>
