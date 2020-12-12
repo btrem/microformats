@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>h-menu example 6 draught list</title>
+
+        <style>
+
+            body > header {
+                margin-bottom: 2em;
+            }
+
+            main {
+                column-width: 26em;
+                column-gap: 4em;
+            }
+
+            section {
+                margin-bottom: 3em;
+                break-inside: avoid;
+            }
+
+            section > header > h1 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            section > header > p {
+                margin-top: 0.4em;
+            }
+
+            .h-menu > ul {
+                padding-left: 0;
+                margin-left: 0;
+                list-style: none;
+            }
+
+            .p-product {
+                margin-bottom: 1em;
+            }
+
+            .p-name {
+                font-weight: bold;
+                padding-right: 1em;
+            }
+
+            .e-description {
+                margin-top: .3em;
+                margin-bottom: .3em;
+            }
+
+            li > ul {
+                display: flex;
+                gap: 2em;
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body class="h-menu">
+
+        <header>
+
+            <hgroup>
+                <h2>h-menu example 6</h2>
+                <h1 class="p-name">draught list</h1>
+            </hgroup>
+
+            <div class="p-seller h-card">
+
+                <a class="p-name p-org u-url" href="https://tsmchughs.com/">
+                    T.S. McHugh's Irish Pub & Restaurant
+                </a>
+
+                <div class="p-adr h-adr">
+                    <div class="p-street-address">21 Mercer <abbr title="street">St</abbr>.</div>
+                    <span class="p-locality">Seattle</span>,
+                    <abbr class="p-region" title="Washington">WA</abbr>
+                    <span class="p-postal-code">98109</span>
+                </div>
+
+                <p class="p-tel">206-282-1910</p>
+
+                <p class="p-email">tsmchughs&#64;tsmchughs&#46;com</p>
+
+                <p>
+                    <a class="u-url" href="http://www.facebook.com/tsmchughs">T.S. McHugh's Facebook page</a>
+                </p>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="h-menu">
+
+                <header>
+                    <h1 class="p-name">microbrew ales</h1>
+                    <p>
+                        $6.00/pint $22.00/pitcher unless otherwise specified
+                    </p>
+                </header>
+
+                <ul>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Breakside</span>
+                            Pale Ale
+                        </span>
+                        <span class="p-price">$6.00</span>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Deschutes</span>
+                            Red Chair <abbr title="Northwest">NW</abbr> Pale Ale
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                            highly hopped, ruby red colored ale
+                        </p>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Hale's</span>
+                            Red Menace Big Amber
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                            highly hopped amber ale
+                        </p>
+                        <ul>
+                            <li class="p-category">cask conditioned</li>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Mac & Jacks's</span> African Amber
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                            unfiltered malty amber
+                        </p>
+                        <ul>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            Manny's Pale Ale
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                            unfiltered, mild pale
+                        </p>
+                        <ul>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Reuben's</span>
+                            Moreish <abbr title="India pale ale">IPA</abbr>
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                        </p>
+                        <ul>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">North Coast Brewing</span>
+                            Old Rasputin Russian Imperial Stout
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                            rich, deep black, full bodied stout
+                        </p>
+                        <ul>
+                            <li class="p-category">cask conditioned</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Snoqualmie</span> Steam Train Porter
+                        </span>
+                        <span class="p-price">$6.00</span>
+                        <p class="e-description">
+                            dry, hoppy porter
+                        </p>
+                        <ul>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+
+
+
+                </ul>
+
+              </section>
+
+              <section class="h-menu">
+
+                <header>
+                    <h1 class="p-name">imports</h1>
+                    <p>$6.50 unless otherwise specified</p>
+                </header>
+
+                <ul>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Franziskaner</span>
+                            <span lang="de">Weissbier</span>
+                        </span>
+                        <span class="p-price">$7.00</span>
+                        <p class="e-description">
+                            unfiltered Bavarian hefeweizen
+                        </p>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Guinness</span> Stout
+                        </span>
+                        <span class="p-price">$6.50</span>
+                        <p class="e-description">
+                            Irish classic
+                        </p>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Stella Artois</span>
+                        </span>
+                        <span class="p-price">$6.50</span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="h-menu">
+
+                <header>
+                  <h1 class="p-name">cider and mead</h1>
+                  <p>
+                      priced individually
+                  </p>
+                </header>
+
+                <ul>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Finn River</span>
+                            Blue Hewe
+                        </span>
+                        <span class="p-price">$6.50</span>
+                        <p class="e-description">
+                        </p>
+                        <ul>
+                            <li class="p-category">gluten-free</li>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Hierophant</span>
+                            Hawthorne Tulsi Mead
+                        </span>
+                        <span class="p-price">$7.50</span>
+                        <p class="e-description">
+                            off-dry herbal mead
+                        </p>
+                        <ul>
+                            <li class="p-category">gluten-free</li>
+                            <li class="p-category">local</li>
+                        </ul>
+                    </li>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card">Pony Shack</span>
+                            Fifer's Dream Cider
+                        </span>
+                        <span class="p-price">$7.00</span>
+                        <p class="e-description">
+                            traditional dry champagne style cider
+                        </p>
+                        <ul>
+                            <li class="p-category">gluten-free</li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </section>
+
+
+            <section class="h-menu">
+
+                <header>
+                  <h1 class="p-name">domestics</h1>
+                </header>
+
+                <ul>
+
+                    <li class="p-product h-product">
+                        <span class="p-name">
+                            <span class="p-brand h-card"><abbr title="Budweiser">Bud</abbr></span> Light
+                        </span>
+                        <span class="p-price">$5.50</span>
+                        <p class="e-description">
+                        </p>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+			<address>
+				<a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+			</address>
+
+        </footer>
+
+    </body>
+
+</html>
