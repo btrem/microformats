@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>h-menu example 5 simple wine card</title>
+
+        <style>
+            header > .h-card {
+                font-size: 150%;
+            }
+            table {
+                border-collapse: collapse;
+                margin-top: 1em;
+            }
+            thead {
+                display: none;
+            }
+            tbody > tr:first-child {
+                color: white;
+                background-color: #333;
+            }
+            tr:nth-child(odd) {
+                color: black;
+                background-color: #ddd;
+            }
+            tr:nth-child(even) {
+                color: black;
+                background-color: #f9f9f9;
+            }
+            td,
+            th {
+                padding: 1em 0.5em;
+                vertical-align: top;
+            }
+            td {
+            }
+            tbody > tr > th {
+                padding-right: 2em;
+                text-align: right;
+            }
+            th[scope="rowgroup"] {
+                font-size: larger;
+                text-align: center;
+            }
+            td > ul {
+                display: flex;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            td > ul > li {
+                padding-right: 2em;
+            }
+        </style>
+
+    </head>
+
+    <body class="h-menu">
+
+        <header>
+
+            <hgroup>
+                <h2>h-menu example 5</h2>
+                <h1 class="p-name">wine card</h1>
+            </hgroup>
+
+            <section class="p-seller h-card">
+
+                <a class="p-name p-org u-url" href="http://example.com/">Ten Mercer Restaurant</a>
+
+                <span class="p-locality">Seattle</span>, <abbr class="p-region" title="Washington">WA</abbr>
+
+            </section>
+
+        </header>
+
+        <main>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th rowspan="2">winery</th>
+                        <th rowspan="2">wine</th>
+                        <th rowspan="2">vintage</th>
+                        <th rowspan="2">region</th>
+                        <th colspan="2">price</th>
+                    </tr>
+                    <tr>
+                        <th>glass</th>
+                        <th>bottle</th>
+                    </tr>
+                </thead>
+
+                <tbody class="h-menu">
+
+                    <tr>
+                        <th class="p-name" scope="rowgroup" colspan="6">sparkling</th>
+                    </tr>
+
+                    <tr>
+                        <th class="p-brand">Segura Viudas</th>
+                        <td class="p-name">Brut Cava .187 Split</td>
+                        <td class="p-category"><abbr title="non vintage">N.V.</abbr></td>
+                        <td class="p-category">Spain</td>
+                        <td class="p-price" title=".187 split bottle">$8</td>
+                        <td class="p-price"><abbr title="not applicable">n/a</abbr></td>
+                    </tr>
+                    <tr>
+                        <th class="p-brand"><abbr title="Sainte">Ste.</abbr> Michelle</th>
+                        <td class="p-name">Brut</td>
+                        <td class="p-category"><abbr title="non vintage">N.V.</abbr></td>
+                        <td class="p-category"><abbr title="Washington">WA</abbr></td>
+                        <td class="p-price">$11</td>
+                        <td class="p-price">$42</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr>
+                        <th class="p-name" scope="rowgroup" colspan="6">whites</th>
+                    </tr>
+
+                    <tr>
+                        <th class="p-brand">For a Song</th>
+                        <td class="p-name">Chardonnay</td>
+                        <td class="p-category">2018</td>
+                        <td class="p-category"><abbr title="Washington">WA</abbr></td>
+                        <td class="p-price">$8.50</td>
+                        <td class="p-price">$32</td>
+                    </tr>
+                    <tr>
+                        <th class="p-brand">Hogue</th>
+                        <td class="p-name">Sauvignon Blanc</td>
+                        <td class="p-category">2019</td>
+                        <td class="p-category"><abbr title="Washington">WA</abbr></td>
+                        <td class="p-price">$8</td>
+                        <td class="p-price">$29</td>
+                    </tr>
+                    <tr>
+                        <th class="p-brand">Mezzacorona</th>
+                        <td class="p-name">Estate Pinot Grigio</td>
+                        <td class="p-category">2019</td>
+                        <td class="p-category">Trentino</td>
+                        <td class="p-price">$7.50</td>
+                        <td class="p-price">$30</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr>
+                        <th class="p-name" scope="rowgroup" colspan="6">rosé</th>
+                    </tr>
+
+                    <tr>
+                        <th class="p-brand">Chateau Minuty</th>
+                        <td class="p-name">'M de Minuty'</td>
+                        <td class="p-category">2019</td>
+                        <td class="p-category">Côtes de Provence</td>
+                        <td class="p-price">$7</td>
+                        <td class="p-price">$28</td>
+                    </tr>
+
+                </tbody>
+
+                <tbody class="h-menu">
+
+                    <tr>
+                        <th class="p-name" scope="rowgroup" colspan="6">reds</th>
+                    </tr>
+
+                    <tr>
+                        <th class="p-brand">Underwood</th>
+                        <td class="p-name">Pinot Noir</td>
+                        <td class="p-category">2018</td>
+                        <td class="p-category"><abbr title="Oregon">OR</abbr></td>
+                        <td class="p-price">$10</td>
+                        <td class="p-price">37</td>
+                    </tr>
+                    <tr>
+                        <th class="p-brand">Rutherford Ranch</th>
+                        <td class="p-name">Cabernet Sauvignon</td>
+                        <td class="p-category">2018</td>
+                        <td class="p-category">Napa</td>
+                        <td class="p-price">$9</td>
+                        <td class="p-price">$34</td>
+                    </tr>
+                    <tr>
+                        <th class="p-brand">Bonny Doon</th>
+                        <td class="p-name">Le Cigare Volant Cuvée Oumuamua</td>
+                        <td class="p-category">2018</td>
+                        <td class="p-category">Monterey</td>
+                        <td class="p-price"><abbr title="not available by the glass">n/a</abbr></td>
+                        <td class="p-price">$42</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </main>
+
+        <footer>
+
+            <address>
+                <a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+            </address>
+
+        </footer>
+
+    </body>
+
+</html>
