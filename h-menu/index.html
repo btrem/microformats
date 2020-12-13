@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>h-menu first draft</title>
+
+        <style>
+
+            dt {
+                font-weight: bold;
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+            dt + dt::before {
+                content: " ⇒ ";
+                margin-right: 0.5em;
+            }
+            dd {
+                margin-bottom: 1em;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>h-menu first draft</h1>
+
+        </header>
+
+        <main>
+
+            <p>
+                The properties below are a first draft proposed for an
+                <a href="http://microformats.org/wiki/menu">h-menu microformat</a>
+                based on ideas from
+                <a href="http://microformats.org/wiki/menu-brainstorming">h-menu brainstorming</a>.
+                This is very much beta, and should not be considered anywhere close
+                to a standard.
+            </p>
+
+            <h2>Properties</h2>
+
+            <dl>
+
+                <dt>p-name</dt>
+                <dd>
+                    the name of the menu, e.g., breakfast, dinner, etc.; might also refer to the menu
+                    item category, e.g., appetizers, main dishes, desserts, beverages, wine list, etc.;
+                    or might describe à la carte or prix fixe menu
+                </dd>
+
+                <dt>p-seller</dt>
+                <dt>h-card</dt>
+                <dd>
+                    restaurant, vendor, or other organization or person selling the food item;
+                    can be a nested h-card
+                </dd>
+
+                <dt>p-product</dt>
+                <dt>h-product</dt>
+                <dd>
+                    individual menu item, e.g., an appetizer, dessert, beverage, etc.; can be an
+                    embedded h-product, which would allow product details like price, photo,
+                    or description; see <a href="http://microformats.org/wiki/h-product">h-product</a>
+                    for details
+                </dd>
+
+                <dt>h-menu</dt>
+                <dd>
+                    to allow for menu sections (lunch, dinner, appetizers, salads, etc.),
+                    h-menu can include nested h-menu items which can have their own name
+                    and list of h-products; h-menu can be nested as deep as needed to
+                    represent a food menu
+                </dd>
+
+            </ul>
+
+        </main>
+
+        <footer>
+
+			<address>
+				<a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+			</address>
+
+        </footer>
+
+    </body>
+
+</html>
