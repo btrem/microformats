@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>microformats include pattern idea</title>
+
+        <style>
+            body {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            dd,
+            p {
+                max-width: 44em;
+                line-height: 115%;
+            }
+            code {
+                color: black;
+                background-color: #eee;
+                font-size: 110%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>microformats include pattern idea</h1>
+
+        </header>
+
+        <main>
+
+            <p>
+                The current
+                <a href="http://microformats.org/wiki/include-pattern">microformats include pattern</a>
+                offers two methods &mdash; using <code>&lt;object&gt;</code> or
+                <code>&lt;a&gt;</code> &mdash;
+                to include in a microformat element parts of a document that are outside
+                of that microformats element's DOM tree. Both patterns have problems,
+                and have not been widely adopted. Also, the include pattern has not been
+                updated for
+                <a href="http://microformats.org/wiki/microformats2">microformats 2</a>.
+                This page is a proposal for a new include pattern using a
+                <a href="https://html.spec.whatwg.org/dev/custom-elements.html">custom element</a>
+                without any semantics.
+            </p>
+
+            <p>
+                The tag name I'm using for the custom element in
+                the example pages is <code>&lt;mf-include&gt;</code> but it could be
+                anything. The custom element has a custom attribute
+                <code>includeid</code>, but again, this attribute name could be anything.
+                The custom <code>includeid</code> attribute would work the same way that the standard
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref"><code>itemref</code></a>
+                attribute works.
+            </p>
+
+            <p>
+                Authors can use the new <code>includeid</code> to place a space-separated list of
+                <code>id</code> attributes. A microformats parser should then search for an
+                element whose <code>id</code> matches a token in the
+                <code>includeid</code>. If it finds a matching id, it should include
+                that matched element in the tree of the microformats element, as if
+                it appeared in the DOM <strong>inside</strong> the
+                <code>&lt;mf-include&gt;</code> element; also, the parser should
+                <strong>ignore</strong> any content in the custom element, effectively
+                <strong>replacing</strong> the custom element's content with the content
+                of all included elements.
+            </p>
+
+            <dl>
+
+                <dt>
+                    <a href="custom-element-1.html">example 1</a>
+                </dt>
+                <dd>
+                    The first example is a page with an h-card element and two h-recipe elements.
+                    The h-card element describes the author of the recipes. Rather than repeat
+                    the h-card markup in each h-recipe, the page instead puts the h-card in
+                    the page <code>&lt;header&gt;</code> element. Each h-recipe element
+                    includes the h-card by using an empty custom element. A microformats
+                    parser should include the properties of the h-card as if that element appeared
+                    <strong>inside</strong> the custom element.
+                </dd>
+
+                <dt>
+                    <a href="custom-element-2.html">example 2</a>
+                </dt>
+                <dd>
+                    The second example is identical to <a href="custom-element-1.html">the first</a>
+                    except for one difference. In this example, the custom element has content,
+                    a shortened, simplified h-card. The parser should produce
+                    the exact same JSON when it parses the microformat, because the parser
+                    should replace the contents of the custom element with the h-card element.
+                    Using this pattern, authors can offer a backup for older parsers that don't
+                    understand the new include pattern.
+                </dd>
+
+            </dl>
+
+        </main>
+
+        <footer>
+
+            <address>
+                <a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+            </address>
+
+        </footer>
+
+    </body>
+
+</html>

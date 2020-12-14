@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>include pattern using custom html element</title>
+
+        <style>
+            figure {
+                display: flex;
+                gap: 1em;
+            }
+            article {
+                max-width: 50em;
+                margin-bottom: 3em;
+            }
+            article > header > h1 {
+                margin-bottom: 0.3em;
+            }
+            .p-summary {
+                font-size: larger;
+            }
+            .p-summary > img {
+                height: 200px;
+                width: 200px;
+                object-fit: cover;
+                float: right;
+                margin-left: 2em;
+                margin-bottom: 1em;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <hgroup>
+                <h2>include pattern using custom html element</h2>
+                <h1>Breakfast Recipes by Henri LaVoie</h1>
+            </hgroup>
+
+            <figure id="chef" class="h-card">
+
+                <img class="u-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Domesticated_goose_head%2C_Chaguaramal%2C_Venezuela.jpg/128px-Domesticated_goose_head%2C_Chaguaramal%2C_Venezuela.jpg" width="128" height="85" alt="">
+
+                <figcaption>
+
+                    <a class="p-name u-url" href="https://example.com/chefs/lavoie">
+                        Henri LaVoie
+                    </a>
+
+                    <p class="p-adr h-adr">
+                        <span class="p-locality">Seattle</span>,
+                        <abbr class="p-region" title="Washington">WA</abbr>
+                        <span class="p-country-name">
+                            <abbr class="United States">U.S.</abbr>
+                        </span>
+                    </p>
+
+                    <p class="p-email">lavoie&#64;example&#46;com</p>
+
+                </figcaption>
+
+            </figure>
+
+        </header>
+
+        <main>
+
+            <article class="h-recipe">
+
+                <header>
+                    <h1 class="p-name">sourdough rye pancakes</h1>
+                    <mf-include class="p-author" includeid="chef"></mf-include>
+                </header>
+
+                <p class="p-summary">
+                    <img class="u-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg/256px-Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg" width="256" alt="">
+                    Rye flour gives the pancakes a slightly spicey flavor and
+                    and is excellent as a sourdough ingredient. Serve with
+                    butter and syrup.
+                </p>
+
+                <p>
+                    Takes about
+                    <time class="dt-duration" datetime="30M">½ hour</time>,
+                    including 5 minutes the evening before to prepare
+                    the batter.
+                </p>
+
+                <ul>
+                    <li class="p-ingredient">1 cup whole grain rye flour</li>
+                    <li class="p-ingredient">water</li>
+                    <li class="p-ingredient">⅛ cup sourdough starter</li>
+                    <li class="p-ingredient">1 egg</li>
+                </ul>
+
+                <div class="e-instructions">
+                    <ol>
+                        <li>
+                            The night before, mix sourdough starter, flour, and
+                            water to form a batter.
+                            The batter should be pourable yet thick enough to hold bubbles.
+                        </li>
+                        <li>
+                            Heat a griddle over medium-high heat.
+                        </li>
+                        <li>
+                            In the morning, reserve ⅛ cup of sourdough and refridgerate for later use.
+                        </li>
+                        <li>
+                            Separate the egg. Add the yolk to the batter and stir in.
+                        </li>
+                        <li>
+                            Beat egg white until stiff and fold into batter. Do not overstir.
+                        </li>
+                        <li>
+                            With a large spoon, spoon batter onto hot griddle and cook
+                            until golden brown, then flip the cake. When it is golen brown
+                            on other side, remove from griddle.
+                        </li>
+                    </ol>
+                </div>
+
+                <p>
+                    Makes <data class="p-yield" value="6">6 pancakes about 5-6 inches each</data>.
+                </p>
+
+            </article>
+
+
+            <article class="h-recipe">
+
+                <header>
+                    <h1 class="p-name">fermented oat porridge</h1>
+                    <mf-include class="p-author" includeid="chef"></mf-include>
+                </header>
+
+                <p class="p-summary">
+                    <img class="u-photo" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Steel_Cut_Oats_008_A.jpg" alt="">
+                    Traditional porridge made with oats that have been
+                    fermented overnight, producing a slightly sour flavor.
+                </p>
+
+                <ul>
+                  <li class="p-ingredient">¼ cup oat steel cut oats</li>
+                  <li class="p-ingredient">filtered water to cover (1 1½ cups)</li>
+                  <li class="p-ingredient">1 cup water</li>
+                </ul>
+
+                <p>
+                    Takes <time class="dt-duration" datetime="15M">15 minutes</time>.
+                </p>
+
+                <div class="e-instructions">
+                  <ol>
+                    <li>
+                        Cover oats with filtered water. Let it ferment at room temperature
+                        overnight.
+                    </li>
+                    <li>
+                        Carefully pour off fermenting water. Add fermented oats and
+                        1 cup of fresh water to small sauce pan. Cook over medium heat
+                        until it reaches desired consistency.
+                    </li>
+                  </ol>
+                </div>
+
+                <p>
+                    Fermentation is simple &mdash; just soak them overnight
+                    in pure (non-chlorinated) water. Soaking makes the resulting
+                    porridge more nutricious, and also significantly
+                    reduces cooking time — crucial for hectic mornings.
+                    You can ferment the oats for longer for a more sour flavor.
+                </p>
+
+                <p>
+                   Makes <data class="p-yield" value="1">one 1-cup serving</data>.
+                </p>
+
+            </article>
+
+        </main>
+
+        <footer>
+
+            <address>
+                <a class="h-card" href="https://github.com/btrem">Brian Tremblay</a>
+            </address>
+
+        </footer>
+
+    </body>
+
+</html>
