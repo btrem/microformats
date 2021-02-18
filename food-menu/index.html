@@ -11,6 +11,7 @@
 
             aside {
                 border-bottom: 1px dashed;
+                font-size: 110%;
                 margin-bottom: 2em;
             }
 
@@ -42,13 +43,32 @@
         </header>
 
         <aside>
+
+            <p>
+                In <time datetime="2021-02">February 2021</time>,
+                I emended this article by
+            </p>
+            <ol type="a">
+                <li>
+                    adding a property name (<b>p-x-section</b>) for menu sections
+                </li>
+                <li>
+                    insertng an <code>-x-</code> infix to correctly
+                    <a href="http://microformats.org/wiki/microformats2-prefixes#vendor_extensions">
+                        mark new, experimental class names</a>
+                </li>
+            </ol>
+
             <p>
                 This article has been republished on my personal website as
-                <a href="https://btrem.com/articles/2021/02-mf-food-menu">microformats food menu idea</a>
-                with a better explanation of the properties, a note on
+                <a href="https://btrem.com/articles/2021/02-mf-food-menu">microformats
+                    food menu idea</a>.
+                In addition to the changes listed above, the copy on my
+                website includes a better explanation of the properties, a note on
                 suggested requirements, and links to better constructed
                 demo menus.
             </p>
+
         </aside>
 
         <main>
@@ -78,7 +98,7 @@
             <p>
                 Following the
                 <a href="http://microformats.org/wiki/microformats2#microformats2_design">microformats2 design patterns</a>,
-                the root name could be <b>h-menu</b>.
+                the root name could be <b>h-x-menu</b>.
             </p>
 
             <h2>Properties</h2>
@@ -99,14 +119,14 @@
                     or might describe à la carte or prix fixe menu
                 </dd>
 
-                <dt>p-seller</dt>
+                <dt>p-x-seller</dt>
                 <dt>h-card</dt>
                 <dd>
                     restaurant, vendor, or other organization or person selling the food item;
                     can be a nested h-card
                 </dd>
 
-                <dt>p-product</dt>
+                <dt>p-x-product</dt>
                 <dt>h-product</dt>
                 <dd>
                     individual menu item, e.g., an appetizer, dessert, beverage, etc.; can be an
@@ -115,6 +135,7 @@
                     for details
                 </dd>
 
+                <dt>p-x-section</dt>
                 <dt>h-menu</dt>
                 <dd>
                     to allow for menu sections (lunch, dinner, appetizers, salads, etc.),
